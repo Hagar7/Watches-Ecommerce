@@ -1,0 +1,237 @@
+@import '../../index.scss';
+
+.nav{
+    background-color: $textClr;
+   position: relative;
+   z-index: 99999999;
+
+    .navContent{
+        display:  $flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .logo{
+            width: 6%;
+            img{
+               max-width: 100%;  
+            }
+        }
+        .myForm{
+            height: 50px !important;
+            width: 40%;
+        }
+        .icons{
+            color: $escClr;
+            display:  $flex;
+            justify-content: space-between;
+            align-items:  $alignItem;
+            .myBtn{ 
+                background-color:$escClr ;
+                border: 1px solid $escClr;
+                transition: 0.5s all ease;
+                -webkit-transition: 0.5s all ease;
+                -moz-transition: 0.5s all ease;
+                -ms-transition: 0.5s all ease;
+                -o-transition: 0.5s all ease;
+                &:hover{
+                    background-color:  $secbg;
+                    color:  $textClr;
+                    border: 1px solid transparent;
+                }
+            }
+            i{
+                margin-right: 18px;
+                cursor: pointer;
+                position: relative;
+                font-size: 20px;
+                span{
+                    position: absolute;
+                    left: 15px;
+                    font-size: 10px;
+                    bottom: 9px;
+                    color:  $textClr;
+                    background-color: $secbg;
+                    height: 18px;
+                    width: 18px;
+                    display:  $flex;
+                    align-items:  $alignItem;
+                    justify-content: $justifyCon;
+                    @include borderRadius(50%)
+                     }
+            }
+        }
+    }
+} 
+
+.mainNav{
+    background-color: black;
+    padding-top:10px;
+    
+    .navy{
+        display:  $flex;
+        justify-content: space-between;
+        
+        .left{
+            @include borderRadius(10px);
+            box-shadow: 0px 0px 5px  rgba(20, 19, 20, 0.2);
+            display:  $flex;
+            flex-direction: column;
+            background-color:$textClr;
+            color: $mainbg;
+            width: 18%;
+            z-index: 99999999;
+            .leftHead{
+                display:  $flex; 
+                background-color:$escClr; 
+                padding:15px 25px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                color:$textClr ;
+                font: {
+                    size: 19px;
+                    weight:500;
+                }
+                i{
+                    margin-right: 10px;
+                }   
+            }
+            .leftLinks{
+                padding:20px 25px 0px;
+                display: $flex;
+                flex-direction: column;
+                list-style: none;
+                // position: relative;
+                ::after {
+                    position: absolute;
+                    content: "";
+                    left: 0px;
+                    width: 180px;
+                    height: 1px;
+                    background-color: rgba(238, 232, 232);
+                    top: 34px;
+                }
+                :last-child::after{
+                    background-color: transparent;
+                }
+                .item{
+                    position: relative;
+                    margin-bottom: 20px;
+                    font: {
+                        weight:500;
+                        size:18px;
+                    } 
+                }
+            }
+        }
+        .center{
+            color:   $textClr;
+            z-index: 99999999;
+        
+            .items{
+                display:  $flex;
+                justify-content: space-between;
+                align-items: center;
+                li{
+                    margin-left:5px;
+                    // background-color:#fff ;
+                    padding: 5px;
+                    font: {
+                        size: 18px;
+                        weight:500;
+                    }
+                }
+            }
+        }
+        .right{
+            color:  $textClr;
+            padding: 5px; 
+            z-index: 99999999;   
+            font: {
+                size: 18px;
+                weight:500;
+            }
+
+        }
+    }
+}
+
+.cartSide{
+    width: 20%;
+    position: fixed;
+    right: 0px;
+    top:0px;
+    background-color: $textClr;
+    z-index: 99999999;
+    height: 100vh;
+    white-space:nowrap;
+    .btns{
+       text-align: center;
+        .myBtn{ 
+            margin-top: 15px; 
+            background-color:$escClr ;
+            border: 1px solid $escClr;
+            transition: 0.5s all ease;
+            -webkit-transition: 0.5s all ease;
+            -moz-transition: 0.5s all ease;
+            -ms-transition: 0.5s all ease;
+            -o-transition: 0.5s all ease;
+            &:hover{
+                background-color:  $secbg;
+                color:  $textClr;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    .header{
+        padding: 20px 15px;
+        display: flex;
+        justify-content: space-between;
+        background-color:$escClr;
+        color: $textClr;
+    }
+    .body{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 50px;
+            height: 70px;
+            border: 1px solid rgb(128, 128, 128,0.3);
+        }
+        .center{
+            h6{
+                text-align: center;
+                font-size: 16px;
+            }
+            .amount{
+                border: 1px solid rgb(128, 128, 128,0.3);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 30px;
+                width: 100px;
+                padding: 10px;
+                span{
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .price{
+            display: flex;
+            flex-direction: column;
+            i{
+                font-size: 20px;
+            }
+            span{
+                margin-top: 13px;
+            }
+        }
+    }
+    .brdr{
+        width:70%;
+        margin: auto;
+        border: 1px solid rgb(128, 128, 128,0.2);
+    }
+    
+}
+

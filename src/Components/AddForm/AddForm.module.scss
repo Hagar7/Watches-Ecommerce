@@ -1,0 +1,18 @@
+@import '../../index.scss';
+
+
+.myBtn{
+    margin-top: 35px; 
+    background-color:$escClr ;
+    border: 1px solid $escClr;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    &:hover{
+        background-color:  $secbg;
+        color:  $textClr;
+        border: 1px solid transparent;
+    }
+}

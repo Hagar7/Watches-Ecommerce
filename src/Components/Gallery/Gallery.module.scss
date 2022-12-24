@@ -1,0 +1,88 @@
+@import '../../index.scss';
+
+
+.gallery{
+    .parent{
+        display: $flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        .item{
+            overflow: hidden;
+            width: 16.5%;
+            object-fit: contain;
+            img{
+                width: 100%;
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                transition:0.5s all ease ;
+                -webkit-transition:0.5s all ease ;
+                -moz-transition:0.5s all ease ;
+                -ms-transition:0.5s all ease ;
+                -o-transition:0.5s all ease ;
+                @include borderRadius(5px);
+                &:hover{
+                    transform: scale(1.1);
+                    -webkit-transform: scale(1.1);
+                    -moz-transform: scale(1.1);
+                    -ms-transform: scale(1.1);
+                    -o-transform: scale(1.1);
+                }   
+                }
+        }
+        .overlay {
+            position: absolute;
+            background-color: rgb(255, 255, 255,0.7);
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .myBtn{
+                margin-top:30px ;
+                background-color:$escClr ;
+                border-color: $escClr;
+                &:hover{
+                    background-color:  $secbg;
+                    color:  $textClr;
+                    border: 1px solid transparent;}
+            }
+        }
+           
+        }
+    }
+
+
+    
+@media screen and (max-width:767px){
+    .gallery{
+        .parent{
+            .item{
+                width: 25%;
+            }
+            .overlay{
+                width: 70%;
+                height: 60%; 
+            }
+        }
+        }
+    }
+
+    @media screen and (min-width:768px) and (max-width:991px){
+        .gallery{
+            .parent{
+                .item{
+                    width: 25%;
+                }
+                .overlay{
+                    width: 70%;
+                    height: 60%; 
+                }
+            }
+            }
+      }

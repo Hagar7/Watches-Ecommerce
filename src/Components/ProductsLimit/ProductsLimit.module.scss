@@ -1,0 +1,132 @@
+@import '../../index.scss';
+
+.products{
+    .item{
+        margin-bottom: 25px;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transition:1s all ease ;
+    -webkit-transition:1s all ease ;
+    -moz-transition:1s all ease ;
+    -ms-transition:1s all ease ;
+    -o-transition:1s all ease ;
+    background-color: $textClr;
+    box-shadow: 0px 0px 7px rgb(128, 128, 128,0.4);
+    @include borderRadius(5px);  
+    padding-bottom: 10px;           
+    &:hover{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1)} 
+    }
+    .priceTitle{
+        color: $escClr;
+    }
+        .img{
+            overflow: hidden;    
+            img{
+                position: relative;}
+        .overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            color:  $textClr;
+            top:0;
+            left: 0;
+            display:  $flex;
+            align-items: $justifyCon;
+            justify-content: $justifyCon;
+            opacity: 0;
+            transition:1s all ease ;
+            -webkit-transition:1s all ease ;
+            -moz-transition:1s all ease ;
+            -ms-transition:1s all ease ;
+            -o-transition:1s all ease ;
+            &:hover{
+                opacity: 1;
+            }
+            .icons{
+                display:  $flex;
+                justify-content: $justifyCon;
+                align-items: $justifyCon;
+                font-size: 16px;
+                cursor: pointer;
+                .icon{
+                    display:  $flex;
+                    justify-content: $justifyCon;
+                    align-items: $justifyCon;
+                    margin-left: 20px;
+                    position: relative;
+                    height: 30px;
+                    width: 30px;
+                    background-color: rgb(114, 164, 153);
+                    @include borderRadius(5px);
+                    transition:1s all ease ;
+                    -webkit-transition:1s all ease ;
+                    -moz-transition:1s all ease ;
+                    -ms-transition:1s all ease ;
+                    -o-transition:1s all ease ;
+                    &:hover{
+                        background-color: gray;   
+                    }
+                    span{
+                        display: none;
+                        position: absolute;
+                        top:-40px;
+                        left:-50px;
+                        width: 120px;
+                        background-color: rgb(114, 164, 153);
+                        padding: 5px;
+                        font-size: 14px;
+                        text-align: center;
+                        @include borderRadius(5px);
+                    }
+                    &:hover span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .modalTitle{
+        color: $escClr;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+    }
+    .modalCat{
+        font-weight: 500;
+    }
+    .modalBtn{
+        background-color:$escClr ;
+        border: 1px solid $escClr;
+
+        &:hover{
+            background-color:$escClr ;
+            border: 1px solid $escClr;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:767px){
+    .products{
+        .item{
+            margin:20px 0px  10px;}
+    .modalTitle{
+        text-align: center;
+    }
+        }
+
+    }
+    @media screen and (min-width:768px) and (max-width:991px){
+        .products{
+            .item{
+                margin:0px 0px  10px;}}
+      }

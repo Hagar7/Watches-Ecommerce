@@ -1,0 +1,50 @@
+@import '../../index.scss';
+
+.topBar{
+ background-color: $escClr;
+ .content{
+    display:$flex ;
+    justify-content: space-between;
+    .topRight{
+        display:$flex ;
+        justify-content: space-between;   
+        .icon{
+            display:$flex ;
+            justify-content: space-between;
+            margin: 0 10px;
+            position: relative;
+            ::after{
+                position: absolute;
+                content: "";
+                right: -10px;
+                width: 0.5px;
+                height: 18px;
+                background-color: rgba(255, 254, 254, 0.3);
+                top: 0px;
+            }  
+            i{
+                margin-right: 10px;   
+            } 
+        } 
+    }
+ }
+}
+
+@media screen and (max-width:767px){
+    .topBar{
+        .content{
+            align-items:  $alignItem;
+            justify-content:$justifyCon;
+            .topRight{
+                display: none;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .item{
+        display: none;
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../index.scss';
+
+
+.slider{
+    position: absolute;
+    top:10%;
+    left:0;
+    width: 100%;
+    z-index: 1;
+    .myCarousel{
+      height: 540px !important;
+      img{
+        object-fit: contain;
+      }
+      .caption{
+        bottom: 30.25rem;
+         right: 38%;
+         h5{
+            font-size: 60px;
+         }
+         p{
+            font-size: 20px;
+         }
+      }
+    }
+}
+
+
+
+@media screen and (max-width:767px){
+  .slider{
+    .myInd{
+      top: 190px;
+    }
+    .caption{
+      bottom: 3rem !important;
+       right: 46% !important;
+       h5{
+          font-size: 16px !important;
+       }
+       p{
+          font-size: 10px !important;
+       }
+    }
+  }
+
+} 
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+  .slider{
+    .myInd{
+      top: 382px;;
+    }
+    .caption{
+      bottom: 14rem !important;
+       right: 46% !important;
+       h5{
+          font-size: 26px !important;
+       }
+       p{
+          font-size: 20px !important;
+       }
+    }
+  }
+}

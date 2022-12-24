@@ -1,0 +1,33 @@
+@import '../index.scss';
+
+
+.home{
+    padding-top: 60px;
+
+}
+
+
+
+
+
+
+@media screen and (max-width:767px){
+    .home{
+       margin-top:140px;
+       h2{
+        text-align: center;
+       }
+    }
+ 
+     
+ }
+
+ 
+@media screen and (min-width:768px) and (max-width:991px){
+    .home{
+        margin-top:400px;
+        h2{
+         text-align: center;
+        }
+     }
+  }

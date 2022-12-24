@@ -1,0 +1,132 @@
+@import '../../index.scss';
+
+
+.banner{
+    padding:30px 0px;
+    .bannerLeft{
+        padding: 0px 20px;
+        height: 60vh;
+        display: $flex;
+        justify-content: $justifyCon;
+        flex-direction: column;
+        background: {
+            image:url('../../../public/images/bann.jpg');
+            size:contain;
+           color: rgb(238, 237, 237);
+            repeat:no-repeat;
+            position: bottom;
+        }
+        h2{
+            color: $escClr;
+            font-size: 60px;
+            font-weight: 600;
+        }
+        h4{
+            margin-top: 15px;
+            font-size: 23px;
+            font-weight: 400;
+        }
+        .mtBtn{
+            margin-top:30px ;
+            background-color:$escClr ;
+            border-color: $escClr;
+            &:hover{
+                background-color:  $secbg;
+                color:  $textClr;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    .bannerRight{
+        height: 60vh;
+        padding: 0px 20px;
+        display: $flex;
+        justify-content: $justifyCon;
+        flex-direction: column;
+        background: {
+            image:url('../../../public/images/Group_5.jpg');
+            size:contain;
+           color: rgb(238, 237, 237);
+            repeat:no-repeat;
+            position: bottom;
+        }
+        h5{
+            color:$escClr;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .bannerOffer{
+            display: flex;
+            align-items: $justifyCon;
+            justify-content: $justifyCon;
+
+            h2,h3{
+                font-size: 60px;
+                font-weight: 600;
+            }
+        }
+        .mtBtn{
+            margin-top:30px ;
+            background-color:$escClr ;
+            border-color: $escClr;
+            &:hover{
+                background-color:  $secbg;
+                color:  $textClr;
+                border: 1px solid transparent;}
+        }
+        .footer{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    .banner{
+        .bannerLeft{
+            margin-bottom: 10px;
+            text-align: center;
+            h2{
+                font-size: 20px;
+                text-align: center;
+            }
+        } 
+        .bannerRight{
+            margin-top: 10px;
+            text-align: center;
+            h5{
+                font-size: 20px;
+            }
+            .bannerOffer{
+                h2,h3{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    }
+
+
+    @media screen and (min-width:768px) and (max-width:991px){
+        .banner{
+            .bannerLeft{
+                margin-bottom: 10px;
+                text-align: center;
+                h2{
+                    font-size: 45px;
+                    text-align: center;
+                }
+            } 
+            .bannerRight{
+                margin-top: 10px;
+                text-align: center;
+                h5{
+                    font-size: 45px;
+                }
+                .bannerOffer{
+                    h2,h3{
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+      }
